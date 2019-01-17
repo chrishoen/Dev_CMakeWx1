@@ -1,12 +1,17 @@
-﻿// Project1.cpp : Defines the entry point for the application.
-//
-
+﻿
+#include <Windows.h>
+#include <stdio.h>
 #include "Project1.h"
-
-using namespace std;
 
 int main()
 {
-	cout << "Hello CMake." << endl;
+   // Initialze winsock.
+   WORD    Version = MAKEWORD(2, 2);
+   WSADATA Data;
+   WSAStartup(Version, &Data);
+
+   // Press enter.
+   printf("press enter\n");
+   getchar();
 	return 0;
 }
