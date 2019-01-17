@@ -1,2 +1,2 @@
 # Dev_CMakeWx1
-vstudio cmake
+cmake test solution, C++, vstudio, windows cmake
