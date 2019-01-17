@@ -1,4 +1,5 @@
 ﻿
+#include "stdafx.h"
 #include <Windows.h>
 #include <stdio.h>
 #include "Project1.h"
