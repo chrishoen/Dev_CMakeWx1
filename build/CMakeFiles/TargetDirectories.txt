@@ -1,5 +1,0 @@
-C:/Prime/DevelopCMake/Dev_CMakeWx1/build/CMakeFiles/edit_cache.dir
-C:/Prime/DevelopCMake/Dev_CMakeWx1/build/CMakeFiles/rebuild_cache.dir
-C:/Prime/DevelopCMake/Dev_CMakeWx1/build/Project1/CMakeFiles/rebuild_cache.dir
-C:/Prime/DevelopCMake/Dev_CMakeWx1/build/Project1/CMakeFiles/Project1.dir
-C:/Prime/DevelopCMake/Dev_CMakeWx1/build/Project1/CMakeFiles/edit_cache.dir
