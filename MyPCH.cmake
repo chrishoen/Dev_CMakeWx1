@@ -75,7 +75,7 @@ function(export_all_flags _filename)
   file(GENERATE OUTPUT "${_filename}" CONTENT "${_compile_definitions}${_include_directories}${_compile_flags}${_compile_options}\n")
 endfunction()
 
-function(add_precompiled_header _target _input)
+function(my_add_precompiled_header _target _input)
   cmake_parse_arguments(_PCH "FORCEINCLUDE" "SOURCE_CXX;SOURCE_C" "" ${ARGN})
 
   get_filename_component(_input_we ${_input} NAME_WE)
