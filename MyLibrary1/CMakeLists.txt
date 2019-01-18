@@ -4,7 +4,6 @@ project (MyLibrary1 CXX)
 file(GLOB SRC_FILES RELATIVE ${PROJECT_SOURCE_DIR} *.cpp)
 file(GLOB INC_FILES RELATIVE ${PROJECT_SOURCE_DIR} *.h)
 add_library (MyLibrary1 STATIC ${SRC_FILES})
-
 my_set_compile_options(MyLibrary1)
 my_add_precompiled_header(MyLibrary1 stdafx.h)
 
