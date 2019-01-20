@@ -8,6 +8,7 @@ message(STATUS "src_list************************" ${src_list})
 
 foreach( src_file ${src_list} )
    GET_FILENAME_COMPONENT(src_name ${src_file} NAME)
+   message(STATUS "src_file*********************" ${src_file})
    message(STATUS "src_file*********************" ${src_name})
 endforeach()
 
