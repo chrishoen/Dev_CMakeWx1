@@ -3,16 +3,25 @@
 project (Project1 CXX)
 
 file(GLOB src_list RELATIVE ${PROJECT_SOURCE_DIR} *.cpp)
-message(STATUS "Project1****************************************")
+add_executable (Project1 ${src_list})
+
+message(STATUS "Project1**************************************** ${PROJECT_NAME}")
 message(STATUS "src_list************************" ${src_list})
 
-foreach( src_file ${src_list} )
-   GET_FILENAME_COMPONENT(src_name ${src_file} NAME)
-   message(STATUS "src_file*********************" ${src_file})
-   message(STATUS "src_file*********************" ${src_name})
-endforeach()
+foreach(src_file ${src_list})
+   if(${src_file} MATCHES "stdafx.cpp") 
+      message(STATUS "src_fileEQ*******************" ${src_file})
+      set_source_files_properties(${src_file} PROPERTIES
+	     COMPILE_FLAGS "/Yc\"stdafx.h\" /Fp\"${PROJECT_BINARY_DIR}\\${PROJECT_NAME}.pch\""
+		 OBJECT_OUTPUTS "${PROJECT_BINARY_DIR}\\${PROJECT_NAME}.pch")
+   else()
+      message(STATUS "src_fileNE*******************" ${src_file})
+      set_source_files_properties(${src_file} PROPERTIES
+	     COMPILE_FLAGS "/Yu\"stdafx.h\" /Fp\"${PROJECT_BINARY_DIR}\\${PROJECT_NAME}.pch\""
+		 OBJECT_DEPENDS "${PROJECT_BINARY_DIR}\\${PROJECT_NAME}.pch")
 
-add_executable (Project1 ${src_list})
+   endif()
+endforeach()
 
 #set_target_properties(Project1 PROPERTIES COMPILE_FLAGS "/Yustdafx.h")
 #set_target_properties(Project1 PROPERTIES COMPILE_FLAGS "/Fp${PROJECT_BINARY_DIR}\\Project1.pch")
