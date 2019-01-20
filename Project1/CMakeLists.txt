@@ -2,7 +2,8 @@
 
 project (Project1 CXX)
 
-file(GLOB src_files RELATIVE ${PROJECT_SOURCE_DIR} *.cpp)
+#file(GLOB src_files RELATIVE ${PROJECT_SOURCE_DIR} *.cpp)
+file(GLOB src_files *.cpp)
 add_executable (Project1 ${src_files})
 my_add_pch (Project1)
 target_link_libraries(Project1 ws2_32)
