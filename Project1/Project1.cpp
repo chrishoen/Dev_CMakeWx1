@@ -6,6 +6,7 @@
 
 int main()
 {
+   aaaaa
    // Initialze winsock.
    WORD    Version = MAKEWORD(2, 2);
    WSADATA Data;

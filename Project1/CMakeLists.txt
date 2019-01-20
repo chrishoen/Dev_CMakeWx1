@@ -1,8 +1,6 @@
 ﻿cmake_minimum_required (VERSION 3.8)
 
 project (Project1 CXX)
-message(STATUS "Project1**************************************** ${PROJECT_NAME}")
-message(STATUS "CMAKE_CXX_FLAGS********************************* ${CMAKE_CXX_FLAGS}")
 
 file(GLOB src_files RELATIVE ${PROJECT_SOURCE_DIR} *.cpp)
 add_executable (Project1 ${src_files})
@@ -12,6 +10,7 @@ return()
 
 message(STATUS "Project1**************************************** ${PROJECT_NAME}")
 message(STATUS "src_files************************" ${src_files})
+message(STATUS "CMAKE_CXX_FLAGS********************************* ${CMAKE_CXX_FLAGS}")
 
 foreach(src_file ${src_files})
    if(${src_file} MATCHES "stdafx.cpp") 
