@@ -1,8 +1,6 @@
 ﻿cmake_minimum_required (VERSION 3.8)
 
-include(MyPCH.cmake)
-include(MyScratch.cmake)
-#include(MyOptions.cmake)
+include(MyCMake.cmake)
 
 project ("Dev_CMakeWx1")
 

@@ -1,20 +1,16 @@
 ﻿{
   "configurations": [
    {
-      "name": "Dev_CMake1",
-      //"generator": "Ninja",
-      "generator": "Visual Studio 15 2017 Win64", 
+      "name": "Dev_CMakeWx1",
+      "generator": "Ninja",
       "configurationType": "RelWithDebInfo",
       "inheritEnvironments": [
          "msvc_x64_x64"
       ],
-      //"buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${name}\\build",
-      //"installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${name}\\install",
-      "buildRoot": "${workspaceRoot}\\build",
-      "installRoot": "${workspaceRoot}\\install",
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${name}\\install",
       "cmakeCommandArgs": "",
-      //"buildCommandArgs": "-v",
-      "buildCommandArgs": "-m:8 -v:minimal -p:PreferredToolArchitecture=x64",
+      "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
    }
   ]
