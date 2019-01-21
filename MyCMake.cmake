@@ -8,6 +8,7 @@ function(my_find_src_files a_src_files _target)
    file(GLOB _src_files RELATIVE ${PROJECT_SOURCE_DIR} *.cpp)
    set(${a_src_files} ${_src_files} PARENT_SCOPE)
 
+   message(STATUS "***********************************************************" ${_target})
    message(STATUS "my_find_src_files************************BEGIN " ${_target})
    foreach(_src_file ${_src_files})
       message(STATUS ${_src_file})
