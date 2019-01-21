@@ -2,8 +2,7 @@
 
 project (Project1 CXX)
 
-my_find_src_files (src_files)
-my_show_src_files (src_files)
+my_find_src_files (src_files Project1)
 
 add_executable (Project1 ${src_files})
 my_add_compile_options (Project1)
